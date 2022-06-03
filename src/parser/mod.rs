@@ -1,26 +1,7 @@
-use lazy_static::lazy_static;
-use std::collections::HashMap;
+mod parser_attribute_parameters;
+
+use super::parser::parser_attribute_parameters::{attribute_parameter, PARSER_OPTIONS};
 use structopt::StructOpt;
-
-lazy_static! {
-    static ref PARSER_OPTIONS: HashMap<&'static str, &'static str> = {
-        let mut hash_map = HashMap::new();
-
-        hash_map.insert(
-            "parser about",
-            "Media tool for clipping videos, extracting\
-            frames, and other features.",
-        );
-
-        hash_map
-    };
-}
-
-macro_rules! attribute_parameter {
-    ($option:expr) => {
-        PARSER_OPTIONS.get($option).unwrap().to_owned()
-    };
-}
 
 #[derive(Debug, StructOpt)]
 #[structopt(about = attribute_parameter!("parser about"))]
