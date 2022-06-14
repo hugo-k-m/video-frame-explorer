@@ -7,7 +7,7 @@ lazy_static! {
 
         hash_map.insert(
             "parser about",
-            "Media tool for clipping videos, extracting\
+            "Media tool for clipping videos, extracting \
             frames, and other features.",
         );
 

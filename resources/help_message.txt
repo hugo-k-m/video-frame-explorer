@@ -1,0 +1,16 @@
+video-frame-explorer 0.1.0
+Media tool for clipping videos, extracting frames, and other features.
+
+USAGE:
+    video-frame-explorer <SUBCOMMAND>
+
+FLAGS:
+    -h, --help       Prints help information
+    -V, --version    Prints version information
+
+SUBCOMMANDS:
+    clip              Clip the video file
+    concat-demuxer    Virtual concatenation script demuxer
+    convert           Convert video formats
+    frames            Extract a video's frames
+    help              Prints this message or the help of the given subcommand(s)

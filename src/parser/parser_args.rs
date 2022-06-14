@@ -1,4 +1,5 @@
-//! Process the parser's input arguments.
+//! Process the parser's inputs.
+
 use super::{Clip, Command, ConcatDemuxer, Convert, Frames, Parser};
 use std::error::Error;
 
