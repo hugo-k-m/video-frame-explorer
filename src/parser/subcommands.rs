@@ -18,6 +18,9 @@ pub struct Clip {
 
     /// Record or transcode stop time.
     pub to: String,
+
+    /// Specifies the output file.
+    pub outfile: PathBuf,
 }
 
 #[derive(StructOpt)]
@@ -29,6 +32,9 @@ pub struct ConcatDemuxer {
     /// Select an encoder or a decoder.
     #[structopt(short, long)]
     pub codec: String,
+
+    /// Specifies the output file.
+    pub outfile: PathBuf,
 }
 
 #[derive(StructOpt)]
@@ -40,6 +46,9 @@ pub struct Convert {
     /// Use fixed quality scale (VBR).
     #[structopt(short, long)]
     pub qscale: String,
+
+    /// Specifies the output file.
+    pub outfile: PathBuf,
 }
 
 #[derive(StructOpt)]
@@ -51,6 +60,9 @@ pub struct Frames {
     /// Video sync method.
     #[structopt(short, long)]
     pub vsync: Option<String>,
+
+    /// Specifies the output file.
+    pub outfile: PathBuf,
 }
 
 #[derive(StructOpt)]
