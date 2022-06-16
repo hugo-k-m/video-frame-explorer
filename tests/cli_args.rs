@@ -6,15 +6,15 @@ use std::process::Command;
 
 #[test]
 fn help_message() -> Result<(), Box<dyn Error>> {
-    let mut help_dir = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
-    help_dir.push("resources/help_message.txt");
+    let mut expected_help_message = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
+    expected_help_message.push("resources/help_message.txt");
 
     let mut cmd = Command::cargo_bin("video-frame-explorer")?;
     cmd.arg("--help");
 
     cmd.assert()
         .success()
-        .stdout(predicate::path::eq_file(help_dir));
+        .stdout(predicate::path::eq_file(expected_help_message));
 
     Ok(())
 }

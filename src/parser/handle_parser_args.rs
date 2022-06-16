@@ -1,6 +1,6 @@
 //! Process the parser's inputs.
 
-use super::{Clip, Command, ConcatDemuxer, Convert, Frames, Parser};
+use super::subcommands::{Clip, Command, ConcatDemuxer, Convert, Frames, Parser};
 use std::error::Error;
 
 impl Parser {
