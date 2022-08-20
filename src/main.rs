@@ -1,3 +1,4 @@
+mod clip;
 mod parser;
 
 use std::error::Error;

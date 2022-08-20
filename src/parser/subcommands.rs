@@ -11,13 +11,14 @@ pub struct Clip {
     pub infile: PathBuf,
 
     /// Set the start time offset.
-    pub ss: Option<String>,
+    pub ss: String,
 
     /// Record or transcode "duration" seconds of audio/video.
+    #[structopt(default_value = attribute_parameter!("clip t"))]
     pub t: String,
 
     /// Record or transcode stop time.
-    pub to: String,
+    pub to: Option<String>,
 
     /// Specifies the output file.
     pub outfile: PathBuf,
